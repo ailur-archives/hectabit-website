@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/adastyles.css">
+    <link rel="icon" href="favicon.svg">
+    <title>Donate to HectaBit</title>
+</head>
+<body>
+    <div w3-include-html="/sidebar.html"></div>
+    <div class="content">
+ 	<h1>Thank you for (considering) donating to HectaBit!</h1>
+	<li><button id="sidebutton">Toggle Sidebar</button></li>
+        <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+        </script>
+
+        <stripe-buy-button
+          buy-button-id="buy_btn_1NopvkFdJPyNGPx53QKxpTDm"
+          publishable-key="pk_live_51NoSUtFdJPyNGPx50X0MQi5UJjSmVwxDTkgVNwVMbaP1nX31MMwDGxgpw8RSFt8nKxBDNJuRbPIn38MaeguXphvb00EwntFyfn"
+        >
+        </stripe-buy-button>
+        <div class="spacer"></div>
+	<li><p1>By donating, you become a honary member of HectaBit, with full voting rights!</p1></li>
+    </div>
+
+    <script>
+        document.getElementById("sidebutton").addEventListener("click", function() {
+            var sidebar = document.querySelector(".sidebar");
+            var content = document.querySelector(".content");
+            sidebar.classList.toggle("hidden");
+            content.classList.toggle("expanded");
+            sidebar.classList.toggle("display");
+        });
+    </script>
+    </body>
+</html>

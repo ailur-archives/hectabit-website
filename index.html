@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adastyles.css">
+    <title>HectaBit Homepage</title>
+    <link rel="icon" href="/assets/img/hectabit.svg">
+</head>
+<body>
+    <div w3-include-html="/sidebar.html"></div>
+    <div class="content">
+        <h1>Welcome to the Hectabit Homepage!</h1>
+        <li><button id="sidebutton">Toggle Sidebar</button></li>
+        <div class="spacer"></div>
+	<li><h1>HectaBit is a (non-registered) nonprofit which creates cool software</h1></li>
+        <div class="spacer"></div>
+	<li><p1>We are now a Matrix HomeServer, including federation. Just sign up!</p1></li>
+	<div class="spacer"></div>
+	<li><p1>Our new infrastructuring is complete: we are now 100% self reliant!</p1></li>
+	<div class="spacer"></div>
+	<li><p1>Everything is now hosting on a Raspberry</p1><a href="/pi" target="_blank"> Pi!</a></li>
+	<div class="spacer"></div>
+	<li><h1>Thank you for choosing HectaBit!</h1></li>
+    </div>
+    <script>
+        document.getElementById("sidebutton").addEventListener("click", function() {
+            var sidebar = document.querySelector(".sidebar");
+            var content = document.querySelector(".content");
+            sidebar.classList.toggle("hidden");
+            content.classList.toggle("expanded");
+            sidebar.classList.toggle("display");
+        });
+    </script>
+</body>
+</html>
+
