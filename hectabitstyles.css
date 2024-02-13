@@ -3,6 +3,17 @@ body, h1, p, ul, li, li2, p1 {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    --button-color: rgb(118, 181, 197);
+    --sidebar-color: rgb(0, 160, 198);
+}
+
+/* Dark mode stylse */
+
+body.dark-mode {
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    --button-color: rgb(27, 105, 125);
+    --sidebar-color: rgb(14, 66, 79);
 }
 
 a {
@@ -13,7 +24,7 @@ a {
 
 .clickbutton {
     padding: 10px;
-    background-color: #00a0c6;
+    background-color: var(--button-color);
     font-size: 15px;
     border-radius: 10px;
     color: white;
@@ -33,8 +44,8 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-    transition: transform 0.3s ease;
-    background-color: rgb(0, 160, 198);
+    transition: all 0.3s ease;
+    background-color: var(--sidebar-color);
     color: white;
     padding: 20px;
     width: 250px;
@@ -52,7 +63,7 @@ body {
     heigh: 20px;
     overflow-y: hidden;
     position: fixed;
-    transition: transform 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     color: rgb(118, 181, 197);
     padding: 20px;
     top: 0px;
@@ -98,8 +109,8 @@ p1 {
     border-radius: 5px;
     padding: 7px 16px;
     text-align: center;
-    background-color: rgb(118, 181, 197);
-    transition: background-color 0.3s ease 0s;
+    background-color: var(--button-color);
+    transition: all 0.3s ease 0s;
     margin: 2px;
 }
 
@@ -109,7 +120,9 @@ button {
     position: fixed;
     padding: 10px;
     color: rgb(255, 255, 255);
-    background: rgb(118, 181, 197);
+    background: var(--button-color);
+    min-width: 28px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
@@ -124,7 +137,7 @@ button:hover {
 .content {
     padding: 20px;
     margin-left: 300px;
-    transition: margin-left 0.3s ease;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
@@ -138,12 +151,8 @@ button:hover {
     margin-left: -20px;
 }
 
-.sidebar.display {
-    display: none;
-}
-
 .sidebar.hidden {
-    transform: translateX(-250px);
+    transform: translateX(-290px);
 }
 
 .content.expanded + .sidebar.hidden {
@@ -153,4 +162,10 @@ button:hover {
 img {
     height: 250px;
     margin-bottom: 30px;
+}
+
+.darkmodeicon {
+    height: 8px;
+    margin-bottom: 1px;
+    scale: 2.7;
 }
