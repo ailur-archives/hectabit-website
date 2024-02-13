@@ -29,6 +29,10 @@ a {
     display: inline-block;
 }
 
+.clickbutton:hover {
+    background-color: rgb(40, 150, 179);
+}
+
 .spacer {
   height: 10px;
 }
@@ -110,6 +114,10 @@ p1 {
     background-color: var(--button-color);
     transition: all 0.3s ease 0s;
     margin: 2px;
+}
+
+.sidebar a:hover {
+    background-color: rgb(40, 150, 179);
 }
 
 button {
