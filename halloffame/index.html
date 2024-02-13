@@ -10,6 +10,8 @@
 <body>
     <div class="closebar">
         <button id="sidebutton">&gt;</button>
+        <button id="sidebutton" onclick="toggleDarkMode()" style="top: 48px;">
+            <img class="darkmodeicon" alt="Toggle Dark Mode" src="/assets/img/moon.svg">
     </div>
     <div class="sidebar">
         <img src="/assets/img/hectabit.svg">
@@ -50,14 +52,7 @@
         <div class="spacer"></div>
         <li><p1>teknos</p1></li>
     </div>
-    <script>
-        document.getElementById("sidebutton").addEventListener("click", function() {
-            var sidebar = document.querySelector(".sidebar");
-            var content = document.querySelector(".content");
-            sidebar.classList.toggle("hidden");
-            content.classList.toggle("expanded");
-            sidebar.classList.toggle("display");
-        });
-    </script>
+    <script src=/sidebar.js></script>
+    <script src=/darkmode.js></script>
 </body>
 </html>

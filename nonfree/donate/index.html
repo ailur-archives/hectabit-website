@@ -10,6 +10,8 @@
 <body>
     <div class="closebar">
         <button id="sidebutton">&gt;</button>
+        <button id="sidebutton" onclick="toggleDarkMode()" style="top: 48px;">
+            <img class="darkmodeicon" alt="Toggle Dark Mode" src="/assets/img/moon.svg">
     </div>
     <div class="sidebar">
         <img src="/assets/img/hectabit.svg">
@@ -47,17 +49,9 @@
         >
         </stripe-buy-button>
         <div class="spacer"></div>
-	<li><p1>By donating, you can request extended storage on centrifuge, viewing of moderation logs, and beta access to HectaBit services! Also, I know this is probably overstated, but it REALLY helps us out a LOT. Thank you <3!</p1></li>
+	<li><p1>Thank you ever so much for (well, considering) donating!</p1></li>
     </div>
-
-    <script>
-        document.getElementById("sidebutton").addEventListener("click", function() {
-            var sidebar = document.querySelector(".sidebar");
-            var content = document.querySelector(".content");
-            sidebar.classList.toggle("hidden");
-            content.classList.toggle("expanded");
-            sidebar.classList.toggle("display");
-        });
-    </script>
+    <script src=/sidebar.js></script>
+    <script src=/darkmode.js></script>
     </body>
 </html>
