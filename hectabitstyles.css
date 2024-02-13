@@ -27,10 +27,13 @@ a {
     min-width: 50px;
     max-width: 100px;
     display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .clickbutton:hover {
     background-color: rgb(40, 150, 179);
+    text-decoration: underline;
 }
 
 .spacer {
