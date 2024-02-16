@@ -62,16 +62,14 @@ body {
 }
 
 .closebar {
-    width: 10px;
-    margin-left: 270px;
     background-color: #0000;
-    heigh: 20px;
     overflow-y: hidden;
     position: fixed;
     transition: all 0.3s ease 0s;
     color: rgb(118, 181, 197);
-    padding: 20px;
-    top: 0px;
+    width: 318;
+    height: 100%;
+    display: flex;
 }
 
 h1 {
@@ -125,13 +123,13 @@ p1 {
 
 button {
     border: none;
-    top: 5px;
-    position: fixed;
+    margin-top: 5px;
     padding: 10px;
     color: rgb(255, 255, 255);
     background: var(--button-color);
     min-width: 28px;
     transition: all 0.3s ease;
+    margin-left: auto;
 }
 
 button:hover {
@@ -157,7 +155,7 @@ button:hover {
 }
 
 .closebar.expanded {
-    margin-left: -20px;
+    transform: translateX(-290px);
 }
 
 .sidebar.hidden {
