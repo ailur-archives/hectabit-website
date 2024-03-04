@@ -49,19 +49,22 @@ body {
 
 /* Sidebar styles */
 .sidebar {
+    border-radius: 10px;
     transition: all 0.3s ease;
     background-color: var(--sidebar-color);
     color: white;
     padding: 20px;
     width: 250px;
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
     overflow-y: auto;
 }
 
 .closebar {
+    left: 2px;
+    top: 15px;
     background-color: #0000;
     overflow-y: hidden;
     position: fixed;
@@ -123,6 +126,7 @@ p1 {
 }
 
 button {
+    border-radius: 5px;
     border: none;
     margin-top: 5px;
     padding: 10px;
@@ -160,11 +164,11 @@ button:hover {
 }
 
 .closebar.expanded {
-    transform: translateX(-290px);
+    transform: translateX(-295px);
 }
 
 .sidebar.hidden {
-    transform: translateX(-290px);
+    transform: translateX(-295px);
 }
 
 .content.expanded + .sidebar.hidden {
