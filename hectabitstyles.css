@@ -12,6 +12,7 @@ body.dark-mode {
     background-color: rgb(34, 34, 34);
     --button-color: rgb(27, 105, 125);
     --sidebar-color: rgb(14, 66, 79);
+    --shadow: black;
 }
 
 a {
@@ -45,6 +46,7 @@ body {
     color: rgb(40, 40, 40);
     --button-color: rgb(118, 181, 197);
     --sidebar-color: rgb(0, 160, 198);
+    --shadow: lightgrey;
 }
 
 /* Sidebar styles */
@@ -60,7 +62,7 @@ body {
     left: 5px;
     bottom: 5px;
     overflow-y: auto;
-    box-shadow: lightgrey 5px 5px 5px;
+    box-shadow: var(--shadow) 5px 5px 5px;
 }
 
 .closebar {
@@ -71,11 +73,12 @@ body {
     position: fixed;
     transition: all 0.3s ease 0s;
     color: rgb(118, 181, 197);
-    width: 318px;
+    width: 1px;
+    margin-left: 290px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-right: 8px;
+    padding-right: 35px;
     z-index: 2;
 }
 
@@ -138,7 +141,7 @@ button {
     min-width: 28px;
     transition: all 0.3s ease;
     margin-left: auto;
-    box-shadow: lightgrey 5px 5px 5px;
+    box-shadow: var(--shadow) 5px 5px 5px;
 }
 
 button:hover {
