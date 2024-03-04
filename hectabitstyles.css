@@ -30,6 +30,7 @@ a {
     display: inline-block;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow) 5px 5px 5px;
 }
 
 .clickbutton:hover {
