@@ -1,8 +1,8 @@
         document.getElementById("sidebutton").addEventListener("click", function() {
-            var sidebar = document.querySelector(".sidebar");
+            var sidecontainer = document.querySelector(".sidecontainer");
             var content = document.querySelector(".content");
             var closebar = document.querySelector(".closebar");
             closebar.classList.toggle("expanded");
-            sidebar.classList.toggle("hidden");
+            sidecontainer.classList.toggle("hidden");
             content.classList.toggle("expanded");
         });

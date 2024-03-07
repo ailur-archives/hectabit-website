@@ -51,6 +51,14 @@ body {
 }
 
 /* Sidebar styles */
+.sidecontainer {
+    position: fixed;
+    height: 100%;
+    width: 310px;
+    border: medium;
+    transition: all 0.3s ease 0s;
+}
+
 .sidebar {
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -176,6 +184,10 @@ button:hover {
 }
 
 .sidebar.hidden {
+    transform: translateX(-295px);
+}
+
+.sidecontainer.hidden {
     transform: translateX(-295px);
 }
 

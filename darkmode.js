@@ -1,3 +1,5 @@
+    var iframe = document.getElementById('iframe');
+
     // Check if a dark mode cookie exists, and apply dark mode if it does
     if (getCookie("darkMode") === "true") {
       applyDarkMode();
@@ -28,10 +30,22 @@
 
     function applyDarkMode() {
       document.body.classList.add("dark-mode");
+
+      iframe.onload = function() {
+          // The iframe has loaded, now you can access its content
+          iframe.contentWindow.document.body.classList.add("dark-mode");
+      };
+      iframe.contentWindow.document.body.classList.add("dark-mode");
     }
 
     function applyLightMode() {
       document.body.classList.remove("dark-mode");
+
+      iframe.onload = function() {
+          // The iframe has loaded, now you can access its content
+          iframe.contentWindow.document.body.classList.remove("dark-mode");
+      };
+      iframe.contentWindow.document.body.classList.remove("dark-mode");
     }
 
     // Helper functions for handling cookies
