@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<clientConfig version="1.1">
+  <emailProvider id="hectabit.org">
+    <domain>hectabit.org</domain>
+
+    <displayName>Hectabit Mail</displayName>
+    <displayShortName>Hectamail</displayShortName>
+
+    <incomingServer type="imap">
+      <hostname>mail.hectabit.org</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <authentication>password-cleartext</authentication>
+      <username>%EMAILADDRESS%</username>
+    </incomingServer>
+
+    <incomingServer type="imap">
+      <hostname>mail.hectabit.org</hostname>
+      <port>143</port>
+      <socketType>STARTTLS</socketType>
+      <authentication>password-cleartext</authentication>
+      <username>%EMAILADDRESS%</username>
+    </incomingServer>
+
+    <outgoingServer type="smtp">
+      <hostname>mail.hectabit.org</hostname>
+      <port>465</port>
+      <socketType>SSL</socketType>
+      <authentication>password-cleartext</authentication>
+      <username>%EMAILADDRESS%</username>
+    </outgoingServer>
+
+    <outgoingServer type="smtp">
+      <hostname>mail.hectabit.org</hostname>
+      <port>587</port>
+      <socketType>STARTTLS</socketType>
+      <authentication>password-cleartext</authentication>
+      <username>%EMAILADDRESS%</username>
+    </outgoingServer>
+
+  </emailProvider>
+</clientConfig>
